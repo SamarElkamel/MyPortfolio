@@ -1721,3 +1721,50 @@ a:focus {
         padding: 0 5px;
     }
 }
+
+/* Lightbox2 z-index and visibility fix for modals */
+.lb-loader,
+.lb-nav,
+.lb-prev,
+.lb-next,
+.lb-dataContainer,
+.lb-details,
+.lb-closeContainer,
+.lb-close {
+    z-index: 10001 !important;
+    pointer-events: auto !important;
+}
+
+.lb-outerContainer,
+.lb-container {
+    z-index: 10000 !important;
+    pointer-events: auto !important;
+}
+
+.lb-overlay {
+    z-index: 9999 !important;
+    pointer-events: none;
+}
+
+.modal {
+    z-index: 1040;
+}
+
+.modal-backdrop {
+    z-index: 1039;
+}
+
+/* Ensure lightbox controls are visible and clickable */
+.lb-prev,
+.lb-next,
+.lb-close {
+    cursor: pointer !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+.lb-prev:hover,
+.lb-next:hover,
+.lb-close:hover {
+    opacity: 1 !important;
+}
